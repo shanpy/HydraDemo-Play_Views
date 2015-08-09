@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'hydra', '9.1.0.rc1'
 # Heroku Hosting
 gem 'rails_12factor'
-gem 'mysql2'
+gem 'pg'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

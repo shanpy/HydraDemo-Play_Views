@@ -26,21 +26,26 @@
 
 #Change to MySQL for Heroku
 default: &default
-  adapter: mysql2
-  encoding: utf8
+  adapter: postgresql
   pool: 5
 
 development:
   <<: *default
-  database: hydra-demo-dev
-  url: mysql2://b302e7bd977ce9:8987b0ab@us-cdbr-iron-east-02.cleardb.net/heroku_dd0d800b019beb7?reconnect=true
+  url: postgres://eqxmjjcakavwgy:WGqs-kv3wPK3KU8HZF4tocZzAh@ec2-174-129-26-115.compute-1.amazonaws.com:5432/d4s7sidtpk0qbl
+  database: d4s7sidtpk0qbl
+  username: eqxmjjcakavwgy
+  pasword: WGqs-kv3wPK3KU8HZF4tocZzAh
 
 test:
   <<: *default
-  database: hydra-demo-test
-  url: mysql2://b302e7bd977ce9:8987b0ab@us-cdbr-iron-east-02.cleardb.net/heroku_dd0d800b019beb7?reconnect=true
+  url:  postgres://dxrdwevliedvah:ecJhZTYaqrFnlJfMDSWixX3PPx@ec2-54-235-134-128.compute-1.amazonaws.com:5432/d9fqb7a83esrp0
+  database: d9fqb7a83esrp0
+  username: dxrdwevliedvah
+  password: ecJhZTYaqrFnlJfMDSWixX3PPx
 
 production:
   <<: *default
-  database: hydra-demo-prod
-  url: mysql2://b302e7bd977ce9:8987b0ab@us-cdbr-iron-east-02.cleardb.net/heroku_dd0d800b019beb7?reconnect=true
+  url: postgres://druipsgxjlvfrq:wIqQhWvT0DsDyrvn1dThXtywQt@ec2-174-129-26-115.compute-1.amazonaws.com:5432/dbkomh3gubpn43
+  database: dbkomh3gubpn43
+  username: druipsgxjlvfrq
+  password: wIqQhWvT0DsDyrvn1dThXtywQt
