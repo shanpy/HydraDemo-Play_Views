@@ -5,4 +5,5 @@ class Book < ActiveFedora::Base
 	property :author, predicate: ::RDF::DC.creator, multiple: false do |index|
 		index.as :stored_searchable
 	end
+	has_many :pages
 end
